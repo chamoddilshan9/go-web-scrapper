@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Go Web Scraper</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; line-height: 1.6; }
+        input[type="text"] { width: 300px; padding: 10px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+        #results { margin-top: 20px; background: #f4f4f4; padding: 15px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Go Web Scraper</h2>
+    <form action="/scrape" method="POST">
+        <input type="text" name="url" placeholder="Enter Website URL" required>
+        <!-- https://news.ycombinator.com/ -->
+        <button type="submit">Scrape Now</button>
+    </form>
+
+    <div id="results">
+        <h3>Results:</h3>
+        <pre>{{.Results}}</pre>
+    </div>
+</body>
+</html>
+
